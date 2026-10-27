@@ -1,56 +1,69 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080807">
-  <meta name="description" content="Descubre fragancias de nicho, diseñador y perfumería árabe en Castle Perfume.">
-  <title>Castle Perfume | Tus mejores fragancias</title>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Castle Perfume: perfumes originales de nicho, diseñador, árabes y alta perfumería en Santo Domingo Este.">
+<title>Castle Perfume | Perfumes originales</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page-shell">
-    <aside class="sidebar" id="sidebar">
-      <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">×</button>
-      <a class="brand-card" href="#inicio" aria-label="Castle Perfume, inicio">
-        <img src="assets/castle-perfume-logo.svg?v=2" alt="Logo Castle Perfume">
-      </a>
-      <nav class="side-nav" aria-label="Navegación principal">
-        <a class="nav-link active" href="#inicio"><span>⌂</span> Inicio</a>
-        <button class="nav-link category-link" data-category="Hombres"><span>♂</span> Hombres</button>
-        <button class="nav-link category-link" data-category="Mujeres"><span>♀</span> Mujeres</button>
-        <button class="nav-link category-link" data-category="Unisex"><span>♧</span> Unisex</button>
-        <button class="nav-link category-link" data-category="Ofertas"><span>◇</span> Ofertas</button>
-        <a class="nav-link" href="#contacto"><span>✉</span> Contacto</a>
-      </nav>
-      <div class="sidebar-perks">
-        <p><span>♧</span> Atención personalizada</p><p><span>♢</span> Variedad de fragancias</p><p><span>✧</span> Calidad y confianza</p>
-        <div class="side-slogan">El perfume habla por ti.</div>
+<header class="topbar">
+  <button class="menu-button" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar perfumes..." aria-label="Buscar perfumes"></label>
+  <button class="cart-button" id="cartButton">Tu carrito <span>Carrito (<b id="cartCount">0</b>)</span></button>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">×</button>
+    <h2>PERFUMES ORIGINALES</h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#productos">Productos destacados</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="cart-summary"><h3>Tu carrito</h3><div id="cartItems">Tu carrito está vacío.</div><p>Total <strong id="cartTotal">RD$ 0</strong></p><button id="orderButton" class="button dark">PEDIR POR WHATS APP</button></div>
+  </aside>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy"><p class="eyebrow">CASTLE PERFUME</p><h1>Tu esencia,<br>nuestra pasión</h1>
+      <p>Tu destino premium para fragancias originales en Santo Domingo Este. Perfumes de nicho, diseñador, árabes y alta perfumería.</p>
+      <a class="button" href="#productos">VER CATÁLOGO</a></div>
+      <div class="hero-brand"><img src="assets/castle-perfume-logo.svg?v=2" alt="Castle Perfume"><strong>CASTLE<br>PERFUME</strong></div>
+    </section>
+    <section id="categorias" class="section">
+      <h2 class="section-title">C A T E G O R Í A S</h2>
+      <div class="category-grid">
+        <button data-category="Hombres" class="category-card men"><span>HOMBRES</span></button>
+        <button data-category="Mujeres" class="category-card women"><span>MUJERES</span></button>
+        <button data-category="Unisex" class="category-card unisex"><span>UNISEX</span></button>
+        <button data-category="Ofertas" class="category-card offers"><span>OFERTAS</span></button>
       </div>
-    </aside>
-    <main class="main-content" id="inicio">
-      <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-        <a class="top-brand" href="#inicio"><img src="assets/castle-perfume-logo.svg?v=2" alt=""><span>CASTLE <small>PERFUME</small></span></a>
-        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar perfumes..." aria-label="Buscar perfumes"></label>
-        <a class="icon-link" href="#contacto" aria-label="Contacto">♙</a>
-        <button class="cart-button" id="cartButton" aria-label="Ver carrito">♧ <span id="cartCount">0</span></button>
-      </header>
-      <section class="hero"><div class="hero-copy"><p class="eyebrow">FRAGANCIAS PARA CADA MOMENTO</p><h1>Tu esencia,<br><em>nuestra pasión.</em></h1><p>Descubre fragancias que dejan huella y encuentran su lugar en cada momento especial.</p><a class="gold-button" href="#productos">VER CATÁLOGO <span>→</span></a></div><div class="hero-image" role="img" aria-label="Frasco de perfume elegante"></div></section>
-      <section class="categories section-wrap" aria-labelledby="categoryTitle"><div class="section-heading"><span></span><h2 id="categoryTitle">Categorías</h2><span></span></div><div class="category-grid">
-        <button class="category-card" data-category="Hombres" style="--category-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=85')"><b>HOMBRES</b><span>Explorar →</span></button>
-        <button class="category-card" data-category="Mujeres" style="--category-image:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85')"><b>MUJERES</b><span>Explorar →</span></button>
-        <button class="category-card" data-category="Unisex" style="--category-image:url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=85')"><b>UNISEX</b><span>Explorar →</span></button>
-        <button class="category-card" data-category="Ofertas" style="--category-image:url('https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=700&q=85')"><b>OFERTAS</b><span>Ver ofertas →</span></button>
-      </div></section>
-      <section class="products-section section-wrap" id="productos"><div class="section-heading"><span></span><h2 id="productsHeading">Productos destacados</h2><span></span></div><p class="sample-note">Catálogo de demostración: nombres, fotos y precios son ejemplos y deben confirmarse con la tienda.</p><div class="product-grid" id="productGrid"></div><p class="no-results" id="noResults" hidden>No encontramos perfumes con esa búsqueda. Prueba con otro nombre o categoría.</p></section>
-      <section class="why-us"><div class="why-title"><p class="eyebrow">EL DETALLE ESTÁ EN LA ESENCIA</p><h2>¿Por qué elegir<br><em>Castle Perfume?</em></h2></div><div class="benefit"><span>✧</span><div><h3>Atención personalizada</h3><p>Te ayudamos a encontrar una fragancia para ti.</p></div></div><div class="benefit"><span>♢</span><div><h3>Variedad de fragancias</h3><p>Opciones para diferentes gustos y ocasiones.</p></div></div><div class="benefit"><span>◇</span><div><h3>Compra fácil</h3><p>Consulta disponibilidad y detalles por WhatsApp.</p></div></div><div class="benefit"><span>⌖</span><div><h3>Estamos para ayudarte</h3><p>Comunícate con nosotros cuando lo necesites.</p></div></div></section>
-      <footer class="footer" id="contacto"><div class="footer-brand"><img src="assets/castle-perfume-logo.svg?v=2" alt="Castle Perfume"><p>TUS MEJORES FRAGANCIAS</p></div><div class="footer-links"><a href="#inicio">Inicio</a><a href="#productos">Catálogo</a><a href="#contacto">Contacto</a></div><div class="footer-contact"><a class="contact-link" href="https://wa.me/18493700389" target="_blank" rel="noopener">WhatsApp: +1 (849) 370-0389</a><a class="contact-link" href="mailto:CastlePerfume12@gmail.com">CastlePerfume12@gmail.com</a><p>Calle 19 esquina Privada, Santo Domingo Este, República Dominicana</p><a class="social-link" href="https://www.instagram.com/castleperfume_/" target="_blank" rel="noopener">@castleperfume_ en Instagram</a></div></footer>
-      <div class="copyright">© <span id="year"></span> Castle Perfume. Todos los derechos reservados.</div>
-    </main>
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="cart-panel" id="cartPanel" aria-label="Carrito de compras" aria-hidden="true"><div class="cart-panel-head"><h2>Tu selección</h2><button id="closeCart" aria-label="Cerrar carrito">×</button></div><div id="cartItems" class="cart-items"><p class="cart-empty">Todavía no has agregado perfumes.</p></div><div class="cart-bottom"><div class="cart-total"><span>Total estimado</span><strong id="cartTotal">RD$ 0</strong></div><button class="gold-button full-button" id="orderButton">CONSULTAR POR WHATSAPP →</button><p class="sample-note">Los productos y precios mostrados son de ejemplo.</p></div></div>
-  <div class="overlay" id="overlay"></div><script src="script.js"></script>
-</body></html>
+    </section>
+    <section id="productos" class="section">
+      <h2 class="section-title">PROD U CTOS D ESTACAD OS</h2>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="noResults" hidden>No encontramos perfumes con esa búsqueda.</p>
+    </section>
+    <section class="why section">
+      <h2>¿POR QUÉ ELEGIR CASTLE PERFUME?</h2>
+      <div class="benefits">
+        <article><h3>Productos originales</h3><p>Garantizamos la autenticidad de cada fragancia.</p></article>
+        <article><h3>Excelente atención</h3><p>Estamos para ayudarte en todo momento.</p></article>
+        <article><h3>Envíos seguros</h3><p>Llevamos tu pedido a la puerta de tu casa.</p></article>
+        <article><h3>Variedad de fragancias</h3><p>Encuentra el aroma perfecto para cada ocasión.</p></article>
+      </div>
+    </section>
+    <footer id="contacto">
+      <div class="footer-top"><h2>El perfume habla por ti</h2><div><h3>Visítanos</h3><p>Calle 19 esquina privada,<br>Santo Domingo Este 11509, República Dominicana</p><p>Sábado: 9:00 a. m. – 4:30 p. m.</p></div></div>
+      <div class="footer-bottom"><div><h3>Contacto</h3><p><a href="mailto:CastlePerfume12@gmail.com">CastlePerfume12@gmail.com</a></p><p><a href="https://wa.me/18493700389">+1 (849) 370-0389</a></p><p><a href="https://www.instagram.com/castleperfume_/" target="_blank" rel="noopener">@castleperfume_</a></p><p>@Castle Perfume</p></div></div>
+    </footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="overlay" class="overlay"></div>
+<script src="script.js"></script>
+</body>
+</html>
